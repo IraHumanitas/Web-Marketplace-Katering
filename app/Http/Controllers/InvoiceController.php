@@ -11,6 +11,6 @@ class InvoiceController extends Controller
     {
         $invoice = Invoice::findOrFail($id);
 
-        return view('customer.order.invoice', compact('invoice'));
+        return view('customer.belanja.invoice', compact('invoice'));
     }
 }
