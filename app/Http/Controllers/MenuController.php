@@ -165,7 +165,7 @@ class MenuController extends Controller
         $merchant = Merchant::findOrFail($merchantId);
         $menus = Menu::where('id_merchant', $merchantId)->get();
 
-        return view('customer.order.menu', compact('merchant', 'menus'));
+        return view('customer.belanja.menu', compact('merchant', 'menus'));
     }
 
 }
