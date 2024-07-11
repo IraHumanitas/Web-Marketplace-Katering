@@ -1,7 +1,6 @@
 @extends('layout/layout')
 
 @section('space-work')
-
     <div class="container">
         <h1>Menu for {{ $merchant->company_name }}</h1>
 
@@ -19,7 +18,7 @@
                             <p class="card-text">Price: {{ $menu->price }}</p>
                             <form action="{{ route('cart.add') }}" method="POST" class="add-to-cart-form">
                                 @csrf
-                                <input type="hidden" name="menu_id" value="{{ $menu->id }}">
+                                <input type="hidden" name="id_menu" value="{{ $menu->id }}">
                                 <div class="form-group">
                                     <label for="quantity-{{ $menu->id }}">Quantity</label>
                                     <input type="number" name="quantity" id="quantity-{{ $menu->id }}" value="1" class="form-control" min="1" max="{{ $menu->stok }}">
@@ -69,6 +68,5 @@
             });
         });
     });
-</script>
-
+    </script>
 @endsection
