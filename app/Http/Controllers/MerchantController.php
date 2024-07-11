@@ -54,7 +54,7 @@ class MerchantController extends Controller
     {
         $merchants = Merchant::all();
 
-        return view('customer.order.merchant', compact('merchants'));
+        return view('customer.belanja.merchant', compact('merchants'));
     }
 
     public function showMenus($merchantId)
