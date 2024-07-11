@@ -42,7 +42,7 @@ class CartController extends Controller
     {
         $cart = Session::get('cart', []);
 
-        return view('customer.order.cart', compact('cart'));
+        return view('customer.belanja.cart', compact('cart'));
     }
 
     public function removeFromCart($id)
